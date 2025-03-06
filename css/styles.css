@@ -1,0 +1,288 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Header más compacto */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* Logo */
+.logo {
+    height: 70px; /* Ajusta el tamaño según lo necesites */
+    width: auto;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Estilos de los enlaces del menú */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: transform 0.3s ease;
+    display: inline-block;  /* Asegura que el efecto de escala funcione */
+}
+
+/* Efecto hover (solo agrandar, sin cambiar color) */
+nav ul li a:hover {
+    transform: scale(1.3) !important;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        height: 60px; /* Ajuste para pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+/* Sección Descripción */
+.descripcion {
+    background-color: #000;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Sección Ver Productos */
+.ver-productos {
+    background: url('../img/SaxoKitCar.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    width: 98,5vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.ver-productos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ver-productos .contenido {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .ver-productos {
+        height: 60vh;
+    }
+}
+
+/* Tarjeta de comentarios */
+#comentarios {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #111; /* Negro más oscuro para la tarjeta */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    text-align: center; /* Centra todo el contenido */
+}
+
+#comentarios:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+
+#comentarios h2 {
+    color: #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Estilos del formulario */
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos */
+    gap: 15px; /* Espacio entre elementos */
+}
+
+#comment-form label {
+    font-weight: bold;
+    color: #ddd;
+    margin-bottom: 5px; /* Añade separación */
+    display: block; /* Hace que ocupe todo el ancho */
+}
+
+/* Ajustar input y textarea al tamaño de la tarjeta */
+#comment-form input,
+#comment-form textarea {
+    width: 90%; /* Ajusta completamente al ancho */
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+}
+
+/* Evitar que el textarea se expanda fuera del contenedor */
+#comment-form textarea {
+    height: 100px; /* Altura fija */
+    resize: none; /* Evita que el usuario lo agrande */
+}
+
+/* Mensaje de login */
+#login-message {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+    display: inline; /* Hace que esté en la misma línea */
+}
+
+/* Enlace para iniciar sesión */
+#login-link {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px; /* Pequeño espacio entre el texto y el enlace */
+    transition: color 0.3s ease;
+    display: inline; /* Mantiene el enlace en la misma línea */
+}
+
+#login-link:hover {
+    color: #dfdfdf;
+    text-decoration: underline; /* Resalta aún más al pasar el mouse */
+}
+
+/* Botón de enviar */
+#comment-form button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#comment-form button:hover {
+    background: #c8c8c8;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    #comentarios {
+        width: 80%; /* Aumenta el tamaño en pantallas pequeñas */
+    }
+
+    #comment-form input,
+    #comment-form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #comentarios {
+        width: 95%;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Iconos Sociales */
+.social-icons {
+    margin-top: 10px;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 15px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #d1d1d1;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .icon {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+}

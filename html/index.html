@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Coches</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="../img/Logo.png" alt="AutoVentas Logo" class="logo">
+        <nav aria-label="Menú de Navegación">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Modelos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesion</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="descripcion">
+        <h2>Sobre AutoVentas</h2>
+        <p>Somos una empresa dedicada a la venta de vehículos nuevos y usados, ofreciendo la mejor calidad y precios competitivos en el mercado. Nuestro objetivo es ayudarte a encontrar el coche de tus sueños con el mejor servicio posible.</p>
+    </section>
+
+    <section class="ver-productos">
+        <div class="contenido">
+            <h2>Descubre nuestros modelos</h2>
+            <a href="productos.html" class="btn">Ver Modelos</a>
+        </div>
+    </section>
+
+    <section id="comentarios">
+        <h2>Foro de Comentarios</h2>
+        <form id="comment-form">
+            <label for="username">Nombre:</label>
+            <input type="text" id="username" placeholder="Tu nombre" required>
+            
+            <label for="message">Comentario:</label>
+            <textarea id="message" placeholder="Escribe tu comentario aquí..." required></textarea>
+            
+            <p id="login-message">Debes iniciar sesión para comentar <a id="login-link" href="login.html">Iniciar sesión</a></p>
+
+
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="comment-list"></div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 AutoVentas. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="icon instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="icon tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+    </footer>
+    
+    <!-- Enlace a Font Awesome para los iconos -->
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>
